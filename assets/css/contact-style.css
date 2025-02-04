@@ -1,0 +1,289 @@
+body{
+    margin: 0;
+    font-family: Helvetica;
+}
+  
+  .letter-image {
+    position: absolute;
+    top: 80%;
+    left: 80%;
+    width: 200px;
+    height: 200px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+  
+  .animated-mail {
+    position: absolute;
+    height: 150px;
+    width: 200px;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    transition: .4s;
+    
+    .body {
+      position: absolute;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 0 100px 200px;
+      border-color: transparent transparent #e95f55 transparent;
+      z-index: 2;
+    }
+    
+    .top-fold {
+      position: absolute;
+      top: 50px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 50px 100px 0 100px;
+      -webkit-transform-origin: 50% 0%;
+      -webkit-transition: transform .4s .4s, z-index .2s .4s;
+      -moz-transform-origin: 50% 0%;
+      -moz-transition: transform .4s .4s, z-index .2s .4s;
+      transform-origin: 50% 0%;
+      transition: transform .4s .4s, z-index .2s .4s;
+      border-color: #cf4a43 transparent transparent transparent;
+      z-index: 2;
+    }
+    
+    .back-fold {
+      position: absolute;
+      bottom: 0;
+      width: 200px;
+      height: 100px;
+      background: #cf4a43;
+      z-index: 0;
+    }
+    
+    .left-fold {
+      position: absolute;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 50px 0 50px 100px;
+      border-color: transparent transparent transparent #e15349;
+      z-index: 2;
+    }
+    
+    .letter {
+      left: 20px;
+      bottom: 0px;
+      position: absolute;
+      width: 160px;
+      height: 60px;
+      background: white;
+      z-index: 1;
+      overflow: hidden;
+      -webkit-transition: .4s .2s;
+      -moz-transition: .4s .2s;
+      transition: .4s .2s;
+      
+      .letter-border {
+        height: 10px;
+        width: 100%;
+        background: repeating-linear-gradient(
+          -45deg,
+          #cb5a5e,
+          #cb5a5e 8px,
+          transparent 8px,
+          transparent 18px
+        );
+      }
+      
+      .letter-title {
+        margin-top: 10px;
+        margin-left: 5px;
+        height: 10px;
+        width: 40%;
+        background: #cb5a5e;
+      }
+      .letter-context {
+        margin-top: 10px;
+        margin-left: 5px;
+        height: 10px;
+        width: 20%;
+        background: #cb5a5e;
+      }
+      
+      .letter-stamp {
+        margin-top: 30px;
+        margin-left: 120px;
+        border-radius: 100%;
+        height: 30px;
+        width: 30px;
+        background: #cb5a5e;
+        opacity: 0.3;
+      }
+    }
+  }
+  
+  .shadow {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    width: 400px;
+    height: 30px;
+    transition: .4s;
+    transform: translateX(-50%);
+    -webkit-transition: .4s;
+    -webkit-transform: translateX(-50%);
+    -moz-transition: .4s;
+    -moz-transform: translateX(-50%);
+    
+    border-radius: 100%;
+    background: radial-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.0), rgba(0,0,0,0.0));
+  }
+  
+    .letter-image:hover {
+      .animated-mail {
+        transform: translateY(50px);
+        -webkit-transform: translateY(50px);
+        -moz-transform: translateY(50px);
+      }
+      
+      .animated-mail .top-fold {
+        transition: transform .4s, z-index .2s;
+        transform: rotateX(180deg);
+        -webkit-transition: transform .4s, z-index .2s;
+        -webkit-transform: rotateX(180deg);
+        -moz-transition: transform .4s, z-index .2s;
+        -moz-transform: rotateX(180deg);
+        z-index: 0;
+      }
+      
+      .animated-mail .letter {
+        height: 180px;
+      }
+      
+      .shadow {
+        width: 250px;
+      }
+
+    }
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(159, 156, 156);
+   margin-bottom: 3em;
+   padding: 1.25em;
+}
+.navbar ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    gap: 3.75em;
+}
+.navbar a{
+    text-decoration: none;
+    font-size: larger;
+    color: black;
+}
+.navbar a:hover{
+    color: orange;
+    text-decoration: underline;
+    
+    }
+
+table {
+        width: 100%;
+        margin-top: 1.25em;
+        text-align: center;
+        
+    }
+th, td {
+        border: 1px solid beige;
+        padding: 0.6em;
+        text-align: center;
+    }
+th {
+        background-color: beige;
+    }
+.formu {
+        margin-top: 1.25em;
+        width: 30%;
+        display: flex;
+       align-items: center;
+       justify-content: center;
+        flex-direction: column;
+        
+    }
+
+#formulaire{
+    display: flex;
+    justify-content: center;
+}
+.form-group {
+        margin-bottom: 0.9em;
+        display: flex;
+        justify-content: center;
+    }
+    .formu h2,p{
+        text-align: center;
+    }
+label {
+        margin-bottom: 0.3em;
+        font-weight: bold;
+    }
+input, textarea, button {
+        width: 100%;
+        padding: 0.6em;
+        border: 1px solid grey;
+        border-radius: 15px;
+    }
+button {
+        background-color: blue;
+        color: white;
+        border: none;
+        width: 40%;
+    
+    }
+    button:hover{
+        cursor: pointer;
+    }
+.contact-info {
+        margin-top: 1.8em;
+        display: flex;
+        justify-content: center;
+    }
+    
+    footer{
+        border: 1px solid yellow;
+        display: flex;
+        justify-content: center;
+        margin: 3em;
+        background-color: beige;
+    }
+    footer img{
+        width: 6.25em;
+        height: 6.25em;
+        object-fit: cover;
+    }
+    .formu h2 {
+        text-align : center;
+        text-shadow : 8px 8px 5px #333162;
+        }
+
+    @media screen and (max-width: 850px){
+        header{
+            flex-direction: column;
+            align-items: center;
+            padding: 1.25em;
+        }
+        .navbar ul{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .letter-image {
+            position: fixed;
+            width: 250px;
+            height: 200px;
+        }
+    }
