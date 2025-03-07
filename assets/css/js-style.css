@@ -1,6 +1,8 @@
 body{
     margin: 0;
     font-family: Helvetica;
+    font-size: 16px;
+    line-height: 1.5;
 }
 header{
     display: flex;
@@ -15,11 +17,14 @@ header{
     justify-content: space-around;
     list-style: none;
     gap: 3.75em;
+    padding: 0;
+    margin: 0;
 }
 .navbar a{
     text-decoration: none;
-    font-size: larger;
+    font-size: 1.1em;
     color: black;
+    transition: color 0.3s ease;
 }
 .navbar a:hover{
     color: orange;
@@ -49,6 +54,7 @@ header{
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
     
     }    
     #box1 h2{
@@ -122,12 +128,11 @@ footer img{
         flex-direction: column;
         align-items: center;
         padding: 1.25em;
-        position: relative;
     }
     .navbar ul{
-        display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 1.5em;
     }
     body{
         flex-direction: column;
